@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: hsl(243, 96%, 9%);
+}
+
+.top_title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-size: 3rem;
+}
