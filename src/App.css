@@ -10,6 +10,7 @@
 
 body {
   background-color: hsl(243, 96%, 9%);
+  overflow-x: hidden;
 }
 
 .top_title {
@@ -17,4 +18,42 @@ body {
   color: hsl(0, 0%, 100%);
   text-align: center;
   font-size: 3rem;
+}
+
+main {
+  margin: 1rem auto;
+  width: calc(100vw - 8rem);
+}
+
+main .today {
+  background-image: url(/src/assets/images/bg-today-large.svg);
+  background-size: cover  ;
+  width: 50rem;
+  height: 16rem;
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+main .today h1 {
+  font-size: 4rem;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .today h1 img {
+  max-width: 5rem;
+}
+
+main .temperature_info_wrapper {
+  padding: 2rem 0;
+  width: 50rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
 }

@@ -1,0 +1,22 @@
+.temperature_info {
+    background-color:  hsl(243, 27%, 20%)   ;
+    padding: 1rem;
+    border-radius: .4rem;
+    width: 18rem;
+    height: 8rem;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid hsl(243, 23%, 30%);
+    
+}
+
+.temperature_info p {
+    font-size: 1rem;
+}
+
+.temperature_info h2 {
+    font-size: 2.15rem;
+    font-weight: 300;
+}
