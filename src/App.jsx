@@ -20,7 +20,7 @@ function App() {
         <div className="temperature_wrapper">
           <div className="today">
             <div className="local">
-              <h2>New York, USA</h2>
+              <h2>Berlin, Germany</h2>
               <p>
                 {get_current_day_info.week_day()},{" "}
                 {get_current_day_info.month()} {get_current_day_info.day},{" "}
@@ -28,24 +28,21 @@ function App() {
               </p>
             </div>
             <h1>
-              {/* <img src={sunny} alt="Sunny" /> */}
-              ✈️
-              11°
+              <img src={sunny} alt="Sunny" />
+              20°
             </h1>
           </div>
 
           <div className="temperature_info_wrapper">
             <TemperatureInfo label={"Feels Like"} info="18°" />
-
             <TemperatureInfo label={"Humidity"} info="46%" />
-
             <TemperatureInfo label={"Wind"} info="14km/h" />
-
             <TemperatureInfo label={"Precipitation"} info="0mm" />
           </div>
 
           <div className="dayly_forecast_wrapper"></div>
         </div>
+
         <div className="hourly_forecast_wrapper"></div>
       </main>
     </>
