@@ -1,0 +1,19 @@
+.daily_temperature {
+  background-color: hsl(243, 27%, 20%);
+  border: 1px solid hsl(243, 23%, 30%);
+  color: hsl(0, 0%, 100%);
+  width: 8rem;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+
+.daily_temperature img {
+  max-width: 100%;
+}
+
+.daily_temperature .temperature_stat {
+  display: flex;
+  justify-content: space-between;
+}

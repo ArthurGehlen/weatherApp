@@ -2,13 +2,15 @@
 import Header from "./layout/Header";
 import SearchContainer from "./layout/SearchContainer";
 import TemperatureInfo from "./components/TemperatureInfo";
+import DailyTemperature from "./components/DailyTemperature";
 
 // Utils
 import "./App.css";
 import get_current_day_info from "./utils/GetCurrentDay";
 
 // Images
-import sunny from "./assets/images/icon-sunny.webp"
+import sunny from "./assets/images/icon-sunny.webp";
+import icon_rain from "./assets/images/icon-rain.webp";
 
 function App() {
   return (
@@ -40,7 +42,53 @@ function App() {
             <TemperatureInfo label={"Precipitation"} info="0mm" />
           </div>
 
-          <div className="dayly_forecast_wrapper"></div>
+          <div className="daily_forecast_wrapper">
+            <h2>Daily forecast</h2>
+            <div className="daily_forecast_map">
+              <DailyTemperature
+                week_day="Tue"
+                icon={icon_rain}
+                min_temperature="20°"
+                max_temperature="14°"
+              />
+              <DailyTemperature
+                week_day="Tue"
+                icon={icon_rain}
+                min_temperature="20°"
+                max_temperature="14°"
+              />
+              <DailyTemperature
+                week_day="Tue"
+                icon={icon_rain}
+                min_temperature="20°"
+                max_temperature="14°"
+              />
+              <DailyTemperature
+                week_day="Tue"
+                icon={icon_rain}
+                min_temperature="20°"
+                max_temperature="14°"
+              />
+              <DailyTemperature
+                week_day="Tue"
+                icon={icon_rain}
+                min_temperature="20°"
+                max_temperature="14°"
+              />
+              <DailyTemperature
+                week_day="Tue"
+                icon={icon_rain}
+                min_temperature="20°"
+                max_temperature="14°"
+              />
+              <DailyTemperature
+                week_day="Tue"
+                icon={icon_rain}
+                min_temperature="20°"
+                max_temperature="14°"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="hourly_forecast_wrapper"></div>

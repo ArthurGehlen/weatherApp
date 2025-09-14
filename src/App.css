@@ -8,7 +8,7 @@
   font-family: "DM Sans", sans-serif;
 }
 
-body {
+body, #root, html {
   background-color: hsl(243, 96%, 9%);
   overflow-x: hidden;
 }
@@ -71,4 +71,15 @@ main .temperature_info_wrapper {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+main .daily_forecast_wrapper h2 {
+  color: hsl(0, 0%, 100%);
+}
+
+main .daily_forecast_wrapper .daily_forecast_map {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
