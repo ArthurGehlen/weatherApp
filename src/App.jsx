@@ -3,12 +3,14 @@ import Header from "./layout/Header";
 import SearchContainer from "./layout/SearchContainer";
 import TemperatureInfo from "./components/TemperatureInfo";
 import DailyTemperature from "./components/DailyTemperature";
+import HourlyTemperature from "./components/HourlyTemperature";
 
 // Utils
 import "./App.css";
 import get_current_day_info from "./utils/GetCurrentDay";
 
 // Images
+import icon_dropdown from "./assets/images/icon-dropdown.svg";
 import sunny from "./assets/images/icon-sunny.webp";
 import icon_rain from "./assets/images/icon-rain.webp";
 
@@ -91,7 +93,26 @@ function App() {
           </div>
         </div>
 
-        <div className="hourly_forecast_wrapper"></div>
+        <div className="hourly_forecast_wrapper">
+          <header>
+            <p>Hourly forecast</p>
+            <button>
+              {get_current_day_info.week_day()}
+              <img src={icon_dropdown} alt="Dropdown" />
+            </button>
+          </header>
+
+          <div className="hourly_map">
+            <HourlyTemperature icon={icon_rain} temperature="20°" hour="3 PM" />
+            <HourlyTemperature icon={icon_rain} temperature="20°" hour="3 PM" />
+            <HourlyTemperature icon={icon_rain} temperature="20°" hour="3 PM" />
+            <HourlyTemperature icon={icon_rain} temperature="20°" hour="3 PM" />
+            <HourlyTemperature icon={icon_rain} temperature="20°" hour="3 PM" />
+            <HourlyTemperature icon={icon_rain} temperature="20°" hour="3 PM" />
+            <HourlyTemperature icon={icon_rain} temperature="20°" hour="3 PM" />
+            <HourlyTemperature icon={icon_rain} temperature="20°" hour="3 PM" />
+          </div>
+        </div>
       </main>
     </>
   );

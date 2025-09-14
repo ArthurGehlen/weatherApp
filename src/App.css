@@ -8,7 +8,9 @@
   font-family: "DM Sans", sans-serif;
 }
 
-body, #root, html {
+body,
+#root,
+html {
   background-color: hsl(243, 96%, 9%);
   overflow-x: hidden;
 }
@@ -34,7 +36,7 @@ main .temperature_wrapper {
 }
 
 main .hourly_forecast_wrapper {
-  flex: 1 0 25rem;
+  flex: 1 0 20rem;
   background-color: peru;
 }
 
@@ -44,7 +46,7 @@ main .today {
   width: 100%;
   height: 22rem;
   color: hsl(0, 0%, 100%);
-  padding: 1rem;
+  padding: 1.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,7 +63,7 @@ main .today h1 {
 }
 
 main .today h1 img {
-  max-width: 5rem;
+  max-width: 6rem;
 }
 
 main .temperature_info_wrapper {
@@ -82,4 +84,47 @@ main .daily_forecast_wrapper .daily_forecast_map {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+main .hourly_forecast_wrapper {
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background-color: hsl(243, 27%, 20%);
+}
+
+main .hourly_forecast_wrapper header {
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .hourly_forecast_wrapper header p {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.25rem;
+}
+
+main .hourly_forecast_wrapper header button {
+  height: 100%;
+  padding: .2rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(243, 23%, 30%);
+  color: hsl(0, 0%, 100%);
+  border: 1px solid transparent;
+  border-radius: .4rem;
+}
+
+main .hourly_forecast_wrapper header button img {
+  max-width: 1rem;
+}
+
+main .hourly_forecast_wrapper .hourly_map {
+  margin-top: 1rem;
+  height: calc(95% - 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
 }

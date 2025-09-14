@@ -4,7 +4,6 @@
   color: hsl(0, 0%, 100%);
   width: 8rem;
   padding: 1rem;
-  margin-bottom: 0.8rem;
   border-radius: 0.8rem;
   text-align: center;
 }
@@ -16,4 +15,10 @@
 .daily_temperature .temperature_stat {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 678px) {
+  .daily_temperature {
+    margin-bottom: 0.8rem;
+  }
 }
