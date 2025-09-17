@@ -19,6 +19,7 @@
 }
 
 #search_container .input_wrapper input {
+  cursor: pointer;
   padding: 0.6rem;
   background-color: transparent;
   border: 1px solid transparent;
@@ -34,6 +35,7 @@
 }
 
 #search_container button {
+  cursor: pointer;
   flex: 1 1;
   min-width: fit-content;
   background-color: hsl(233, 67%, 56%);
@@ -43,4 +45,9 @@
   font-size: 1rem;
   color: hsl(0, 0%, 100%);
   cursor: pointer;
+  transition: .4s ease background-color;
+}
+
+#search_container button:hover {
+  background-color: hsl(248, 70%, 36%);
 }

@@ -1,0 +1,18 @@
+.menu_btn {
+  background-color: transparent;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  padding: 0.6rem 0.4rem;
+  text-align: start;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu_btn:hover,
+.selected {
+  background-color: hsl(243, 23%, 24%);
+}

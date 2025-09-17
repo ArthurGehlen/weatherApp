@@ -1,4 +1,5 @@
 .temperature_info {
+  flex: 1;
   background-color: hsl(243, 27%, 20%);
   padding: 1rem;
   border-radius: 0.4rem;
