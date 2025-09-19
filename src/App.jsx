@@ -4,10 +4,12 @@ import SearchContainer from "./layout/SearchContainer";
 import TemperatureInfo from "./components/TemperatureInfo";
 import DailyTemperature from "./components/DailyTemperature";
 import HourlyTemperature from "./components/HourlyTemperature";
+import MenuButton from "./components/MenuButton";
 
 // Utils
-import "./App.css";
+import { useState } from "react";
 import get_current_day_info from "./utils/GetCurrentDay";
+import "./App.css";
 
 // Images
 import icon_dropdown from "./assets/images/icon-dropdown.svg";
@@ -15,9 +17,37 @@ import sunny from "./assets/images/icon-sunny.webp";
 import icon_rain from "./assets/images/icon-rain.webp";
 
 function App() {
+  const [unitsSelected, setUnitsSelected] = useState({
+    temperature: "Celsius",
+    wind_speed: "km",
+    precipitation: "mm",
+  });
+  const [hourlyMenuActive, setHourlyMenuActive] = useState(false);
+
+  const handle_unit_change = (e) => {
+    const name = e.target.name;
+
+    switch (name) {
+      case "Celsius":
+      case "Fahrenheit":
+        setUnitsSelected((prev) => ({ ...prev, temperature: name }));
+        break;
+      case "km":
+      case "mph":
+        setUnitsSelected((prev) => ({ ...prev, wind_speed: name }));
+        break;
+      case "mm":
+      case "in":
+        setUnitsSelected((prev) => ({ ...prev, precipitation: name }));
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <>
-      <Header />
+      <Header unit_change={handle_unit_change} units={unitsSelected} />
       <h1 className="top_title">How's the sky looking today?</h1>
       <SearchContainer />
       <main>
@@ -96,10 +126,24 @@ function App() {
         <div className="hourly_forecast_wrapper">
           <header>
             <p>Hourly forecast</p>
-            <button>
-              {get_current_day_info.week_day()}
-              <img src={icon_dropdown} alt="Dropdown" />
-            </button>
+            <div className="hourly_menu_wrapper">
+              <button
+                className="hourly_menu_btn"
+                onClick={() => setHourlyMenuActive(!hourlyMenuActive)}
+              >
+                {get_current_day_info.week_day()}
+                <img src={icon_dropdown} alt="Dropdown" />
+              </button>
+              <div className="hourly_menu" style={hourlyMenuActive ? {display: "flex"} : {display: "none"}}>
+                <MenuButton label="Monday" is_selected={true} is_unit={false} />
+                <MenuButton label="Tuesday" />
+                <MenuButton label="Wednesday" />
+                <MenuButton label="Thursday" />
+                <MenuButton label="Friday" />
+                <MenuButton label="Saturday" />
+                <MenuButton label="Sunday" />
+              </div>
+            </div>
           </header>
 
           <div className="hourly_map">

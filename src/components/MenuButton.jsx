@@ -2,7 +2,7 @@ import "./MenuButton.css";
 
 import icon_checkmark from "../assets/images/icon-checkmark.svg";
 
-function MenuButton({ label, handle_click, is_selected, name }) {
+function MenuButton({ label, handle_click, is_selected, name, is_unit }) {
   return (
     <button
       className={`menu_btn ${is_selected ? "selected" : ""}`}
@@ -10,7 +10,7 @@ function MenuButton({ label, handle_click, is_selected, name }) {
       name={name}
     >
       {label}
-      {is_selected && <img src={icon_checkmark} alt="Check" />}
+      {is_selected && is_unit && <img src={icon_checkmark} alt="Check" />}
     </button>
   );
 }
